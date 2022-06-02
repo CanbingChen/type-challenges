@@ -4,6 +4,8 @@ type X = Promise<string>
 type Y = Promise<{ field: number }>
 type Z = Promise<Promise<string | number>>
 
+type inter1 = MyAwaited<Z>
+
 type cases = [
   Expect<Equal<MyAwaited<X>, string>>,
   Expect<Equal<MyAwaited<Y>, { field: number }>>,
