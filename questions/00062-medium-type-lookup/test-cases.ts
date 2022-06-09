@@ -13,6 +13,9 @@ interface Dog {
 
 type Animal = Cat | Dog
 
+type in1 = HasVal<Animal, 'dog'>
+type inter1 = LookUp<Animal, 'dog'>
+
 type cases = [
   Expect<Equal<LookUp<Animal, 'dog'>, Dog>>,
   Expect<Equal<LookUp<Animal, 'cat'>, Cat>>,

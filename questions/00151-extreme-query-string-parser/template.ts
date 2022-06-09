@@ -1,1 +1,2 @@
-type ParseQueryString = any
+type ParseQueryString<str extends string> = {
+}
